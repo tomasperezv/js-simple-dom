@@ -21,6 +21,6 @@ http://www.tomasperez.com
 
 License
 -----------
-Public Domain
+Public Domain.
 
 No warranty expressed or implied. Use at your own risk.

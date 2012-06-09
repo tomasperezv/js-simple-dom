@@ -1,5 +1,6 @@
 /**
  * @author tom@0x101.com
+ * @class DOM
  *
  * Basic DOM operations
  */
@@ -7,7 +8,7 @@ var DOM = {
 
 	/**
 	 * @author tom@0x101.com  
-	 * @param Object|string|Array el
+	 * @param HTMLElement|string|Array el
 	 */
 	toggle: function(el) {
 
@@ -23,6 +24,11 @@ var DOM = {
 		}
 	},
 
+	/**
+	 * Toggle an element.
+	 * @author tom@0x101.com
+	 * @param Object|string el
+	 */
 	show: function(el) {
 		var el = (typeof el == 'string' ? this.get(el) : el),
 			style = el.style;
@@ -31,10 +37,21 @@ var DOM = {
 		}
 	},
 
+	/**
+	 * Simple DOM selector.
+	 * @author tom@0x101.com
+	 * @param Object|string el
+	 */
 	get: function(id) {
 		return document.getElementById(id);
 	},
 
+	/**
+	 * @param {HTMLElement} el
+	 * @param {String} rawHTML
+	 * @param {Function} [customFunc] Function that we will apply to the elements.
+	 * @author tom@0x101.com
+	 */
 	inject: function(el, rawHTML, customFunc) {
 
 		if (document.createRange) {
@@ -77,15 +94,27 @@ var DOM = {
 
 	},
 
+	/**
+	 * @author tom@0x101.com
+	 * @param {NodeElement} node
+	 */
 	isScriptElement: function(node) {
 		return node.nodeType === Node.ELEMENT_NODE &&
 				node.toString().indexOf('HTMLScriptElement') > 0
 	}
 };
 
+/**
+ * @author tom@0x101.com
+ * @class Types
+ */
 var Types = {
+	/**
+	 * @author tom@0x101.com
+	 * @param {Mixed} value
+	 * @return {Boolean}
+	 */
 	isArray: function(value) {
 		return Object.prototype.toString.apply(value) === '[object Array]';
 	}
-}
-
+};
