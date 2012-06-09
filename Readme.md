@@ -13,6 +13,8 @@ DOM.inject('element2-id', htmlCode);
 ...
 ```
 
+Reference: http://tomasperezv.github.com/js-simple-dom/
+
 Author
 ----------
 Tomas Perez - tom@0x101.com
